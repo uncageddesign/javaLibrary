@@ -21,4 +21,8 @@ public class Library {
     public boolean hasCapacity() {
         return this.capacity >= this.collection.size();
     }
+
+    public Book takeBook() {
+       return this.collection.remove(0);
+    }
 }

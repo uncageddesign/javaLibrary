@@ -29,10 +29,10 @@ public class BorrowerTest {
     public void borrowerHasCheckOutABook(){
         //Given the borrower can checkout books
         assertNotNull(borrower);
-        //And the library has a collection
+        //And the library has a collection with a book in it
         assertNotNull(library);
+        library.addBook(book);
         //When a book is checked out by borrower
-        borrower.checkBook(book);
         borrower.hasCheckedOutBook(library);
         //Then the borrowers checkout books increase by 1
         assertEquals(1, borrower.checkedOut());
